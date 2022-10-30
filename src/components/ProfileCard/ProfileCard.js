@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
-import Cover from '../../images/bb.png'
-import Profile from '../../images/trail.png'
+import Cover from '../../images/bac_cover.jpg'
+import Profile from '../../images/viraat.jpg'
 import './ProfileCard.css'
 import {useNavigate} from 'react-router-dom'
 import { store } from "../../App";
@@ -30,22 +30,19 @@ const ProfileCard = () => {
           <hr/>
           <div>
           <div className='follow'>
-            <span>600</span>
+            <span>25</span>
             <span>Following</span>
           </div>
           <div className='vl' style={{height: '100%',
     width: 1,
     backgroundColor: '#909090'}}></div>
           <div className='follow'>
-            <span>1</span>
+            <span>10</span>
             <span>Followers</span>
           </div>
           {ProfilePage&&(
             <>
-            <div className="vl" style={{height: '100%',
-    width: 1,
-    backgroundColor: '#909090'}}>
-              
+            <div className="vl" style={{height: '100%',width: 1,backgroundColor: '#909090'}}>            
             </div>
             <div className='follow'>
               <span>3</span>
