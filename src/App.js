@@ -4,6 +4,7 @@ import Auth from './pages/Auth/Auth';
 import {Home} from './pages/home/Home';
 import {BrowserRouter,  Routes,Route} from 'react-router-dom'
 import ProfilePage from './pages/Profile/ProfilePage';
+import LandingPage from './pages/LandingPage/LandingPage'
 import Chat from './pages/Chat/Chat';
 export const store = createContext();
 function App() {
@@ -19,7 +20,8 @@ function App() {
       <store.Provider value={{users,setUsers,pd,setpd}}>
       <BrowserRouter>
       <Routes>
-        <Route path='/' element={<Auth/>}></Route>
+        <Route path='/' element={<LandingPage/>}></Route>
+        <Route path='/auth' element={<Auth/>}></Route>
         <Route path='/home' element={<Home/>}></Route>
         <Route path='/profile' element={<ProfilePage/>}></Route>
         <Route path='/chat' element={<Chat/>}></Route>

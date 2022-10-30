@@ -197,7 +197,7 @@ const Auth = () => {
         <Route path="/home" element={<Home />}></Route>
       </Routes>
     </div>
-    //  onClick={()=>{navigate('/home')}}
+  
   );
 };
 
