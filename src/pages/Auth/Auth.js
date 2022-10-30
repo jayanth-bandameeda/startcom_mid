@@ -52,7 +52,7 @@ const Auth = () => {
     
     if(!usernamePattern.test(data.username)){
         alert(
-          "Enter username as per requirements:\nFirst letter should not be a number or special character\nMinimum length of 6"
+          "Enter username as per requirements:\nFirst letter should not be a number or special character\nMinimum length of 7"
         );
         return;
     }
