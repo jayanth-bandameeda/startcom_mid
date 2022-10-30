@@ -6,6 +6,7 @@ import {UilPlayCircle} from "@iconscout/react-unicons"
 import {UilTimes} from "@iconscout/react-unicons"
 import {v4 as uuidv4} from 'uuid'; 
 import { PostsData } from '../../Data/PostsData'
+
 // import postPic3 from '../../images/bb.png'
 
 const PostShare = () => {
@@ -22,28 +23,29 @@ const PostShare = () => {
     console.log(event.target.files[0])
     if(event.target.files&&event.target.files[0]){
       let img=event.target.files[0];
-      setImage(
-        URL.createObjectURL(img)
+
+      setImage({
+        image:URL.createObjectURL(img)
+      }
       )
-      console.log(image)
-      setPostData({...postData,[img]:image})
+     
+      // console.log(image)
+      // setPostData({...postData,[img]:image})
 
     }
+  }
+  const textHandler=(e)=>{
+    setPostData({...postData, desc:e.target.value})
   }
   const addPostHandler=(event)=>{
     event.preventDefault();
     event.currentTarget.disabled = true;
+  //  console.log(postData)
     PostsData.push(postData)
-    console.log(postData)
     console.log(PostsData)
+    
     // setImage('')
     // postData.desc=''
-    
-  }
-
-
-  const textHandler=(e)=>{
-    setPostData({...postData, desc:e.target.value})
   }
   return (
     <div className='PostShare'>
