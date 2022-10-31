@@ -1,6 +1,6 @@
 import React,{useContext} from 'react'
 import Cover from '../../images/bac_cover.jpg'
-import Profile from '../../images/viraat.jpg'
+import Profile from '../../images/trail.png'
 import './ProfileCard.css'
 import {useNavigate} from 'react-router-dom'
 import { store } from "../../App";

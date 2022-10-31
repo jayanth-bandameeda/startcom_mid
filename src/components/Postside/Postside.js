@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Posts from '../Posts/Posts'
 import PostShare from '../PostShare/PostShare'
 import './Postside.css'

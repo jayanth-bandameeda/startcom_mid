@@ -23,7 +23,7 @@
     width:100%;
 }
 .ProfileImages>img:nth-of-type(2){
-    width:6rem;
+    width:7rem;
     border-radius:50%;
     position:absolute;
     bottom: -3rem;

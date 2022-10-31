@@ -38,26 +38,26 @@ const Auth = () => {
     const firstnamePattern = /^[a-z]{3,24}$/i;
     const lastnamePattern = /^[a-z]{3,24}$/i;
 
-    if(!firstnamePattern.test(data.firstname)){
+    if(!firstnamePattern.test(data.firstname)&&isSignup){
         alert("Enter First Name as per the requirements:\n1. Should contain only alphabets\n2.length should be between 3 and 24");
         return;
     }
 
-    if (!lastnamePattern.test(data.lastname)) {
+    if (!lastnamePattern.test(data.lastname)&&isSignup) {
       alert(
         "Enter Last Name as per the requirements:\n1. Should contain only alphabets\n2.length should be between 3 and 24"
       );
       return;
     }
     
-    if(!usernamePattern.test(data.username)){
+    if(isSignup&&  !usernamePattern.test(data.username)){
         alert(
-          "Enter username as per requirements:\nFirst letter should not be a number or special character\nMinimum length of 7"
+          "Enter username as per requirements:\nFirst letter should not be a number or special character\nNo special characters\nMinimum length of 7"
         );
         return;
     }
 
-    if (!emailPattern.test(data.email)) {
+    if (!emailPattern.test(data.email)&&isSignup) {
       alert("Please enter the correct email!");
       return;
     }
@@ -70,7 +70,7 @@ const Auth = () => {
       return;
     }
 
-    if (data.password != data.confirmpassword) {
+    if ((data.password !== data.confirmpassword)&&isSignup){
       alert("Passwords do not match.");
       return;
     }
